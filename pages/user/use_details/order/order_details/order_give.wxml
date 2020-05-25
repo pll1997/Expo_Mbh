@@ -1,0 +1,13 @@
+<!--pages/user/use_details/order/order_details/order_give.wxml
+  票据赠送/票据绑定
+-->
+<view class="main">
+  <view class="list"></view>
+  <view class="fixed">
+    <view  class="qx">全选</view>
+    <view class="btn">
+      <text>绑定票据</text>
+      <text>赠送票据</text>
+    </view>
+  </view>
+</view>

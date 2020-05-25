@@ -1,0 +1,34 @@
+<!--component/forum/forum.wxml--论坛的主体内容页-（日期-地址-主题）-->
+<view class='body' wx:if='{{nodate==false}}'>
+  <view class='selectorBar'>
+    <picker class='selector' mode="selector"  range-key="{{'start_time'}}" range="{{dateList}}" bindchange="bindDateChange" data-item="日期">
+      <view class="picker">
+        {{dateSelected}}
+        <icon class='iconfont icon-xiajiantou' size='14'></icon> 
+      </view>
+    </picker>
+    <picker class='selector middle' mode="selector" range="{{addressList}}" range-key="{{'type_addr'}}"  bindchange="bindDateChange" data-item="地址">
+      <view class="picker" >
+        {{addressSelected}}
+        <icon class='iconfont icon-xiajiantou' size='14'></icon> 
+      </view>
+    </picker>
+    <picker class='selector' mode="selector" range="{{themeList}}"  range-key="{{'type_theme'}}"  bindchange="bindDateChange" data-item="主题">
+      <view class="picker">
+        {{themeSelected}}
+        <icon class='iconfont icon-xiajiantou' size='14'></icon> 
+      </view>
+    </picker>
+  </view>
+
+  <view class='hauto'></view>
+  <view class='listbox'>
+      <view class='list' wx:for="{{listarry}}" wx:key='index'  data-id="{{item.id}}" bindtap="detailsurl">
+          <view class='list_tlt'>{{item.tltle}}</view>
+          <view class='list_zy'>{{item.abstract}}</view>
+          <view class='list_zy'>{{item.start_time}}-{{item.start_time}}</view>
+        </view>
+        <view class='h10'></view>
+  </view>
+</view>
+<view class="nodate"  wx:else>{{nodatecentent}}</view>

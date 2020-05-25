@@ -1,0 +1,15 @@
+<!--pages/user/use_details/order/order_details/Ticket_details.wxml
+  票务信息详情
+-->
+<view class="main">
+  <view class="tlt">赠送信息</view>
+  <view class="details">
+    <view>赠送者姓名：龙春</view>
+    <view>赠送者账号：1518086666</view>
+    <view>票名：2016年数博会门票</view>
+    <view>票务来源：赠送</view>
+    <view>绑定状态：已绑定</view>
+    <view>票务使用状态：已使用</view>
+    <view>座位号：无</view>
+  </view>
+</view>

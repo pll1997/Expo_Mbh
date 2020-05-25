@@ -1,0 +1,31 @@
+<!--pages/forum/guest_details.wxml--嘉宾详情-->
+<!--pages/forum/forum_details.wxml--论坛详情-->
+<view class='mian'>
+  <view class='user_center_bg' >
+     <view class="login_link" bindtap='bindgetuserinfo'>
+        <image class='tx_img' src="{{guest_head_img}}"></image>
+        <view>{{guest_name}}</view>
+        <view>{{company}}</view>
+        <view>{{post}}</view>
+     </view>
+  </view>
+  <view class="h20"></view>
+  <view class="details">
+    <view class="top">
+      <view class="top-tlt">
+        <text class="br"></text>
+        <text class='font'>嘉宾会议</text>
+      </view>
+    </view>
+    <view class="details-centent" wx:for="{{guestlist}}" wx:key='index'>
+      <view class="details-centents">
+        <text>会议主题：{{item.full_name}}</text>
+        <text>时间：{{item.time}}</text>
+        <text>会议身份：{{item.attend_type}}</text>
+        <text>地点：<text class="place">{{item.address}}</text> </text>
+      </view>
+    </view>
+    <view class='tishi' hidden="{{hiddetishi}}">暂无会议信息</view>
+  </view>
+</view>
+

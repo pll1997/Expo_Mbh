@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/use_details/order/order_list/order_list",
+    "pages/user/use_details/my_cart/my_cart",
+    "pages/user/user",
+    "pages/forum/forum",
+    "pages/logs/logs",
+    "pages/observation/observation",
+    "pages/user/use_details/login/login",
+    "pages/user/use_details/use_erweima/use_erweima",
+    "pages/user/use_details/User_Information/User_Information",
+    "pages/ContentPage/details/all_icon_list/All_list_details",
+    "components/DistinguishedGuest/DistinguishedGuest",
+    "pages/user/use_details/user_wyly/user_wyly",
+    "pages/user/use_details/About_us/About_us",
+    "pages/forum/forum_details",
+    "pages/forum/guest_details",
+    "pages/observation/observation_details",
+    "pages/ContentPage/details/all_icon_list/demo",
+    "pages/user/use_details/order/order_list_Unpaid/order_list_Unpaid",
+    "pages/user/use_details/order/order_details/Ticket_details",
+    "pages/user/use_details/order/order_details/order_details",
+    "pages/user/use_details/order/order_details/order_give"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "数博会",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false,
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "selectedColor": "#00ab84",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "逛展会",
+        "iconPath": "icon/home.png",
+        "selectedIconPath": "icon/home_selected.png"
+      },
+      {
+        "pagePath": "pages/forum/forum",
+        "text": "论坛",
+        "iconPath": "icon/forum.png",
+        "selectedIconPath": "icon/forum_selected.png"
+      },
+      {
+        "pagePath": "pages/observation/observation",
+        "text": "观摩点",
+        "iconPath": "icon/observation point.png",
+        "selectedIconPath": "icon/observation point_selected.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "用户中心",
+        "iconPath": "icon/mine.png",
+        "selectedIconPath": "icon/mine_selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

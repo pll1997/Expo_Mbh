@@ -1,0 +1,26 @@
+<!--components/DistinguishedGuest/DistinguishedGuest.wxml  论坛板块-嘉宾界面-->
+<view class='warp' wx:if='{{nodate==false}}'>
+<view class='topnav'>
+  <view class='search_con'>
+    <form bindsubmit="formSubmit">
+      <icon class='search_icon icon_star' type='search' size='18'></icon> 
+      <input type="search" name="keyword" value="{{inputValue}}" bindinput="search" bindconfirm='bindconfirm'  class="search_input" placeholder='请输入关键字'/>
+      <icon class='search_icon  icon_end' type='clear' size='18' bindtap='icon_delete'></icon> 
+    </form>
+  </view> 
+</view>
+<view class='loding'  hidden="{{hiddenName}}">数据加载中...</view>
+<view class='listbox dhv'>
+    <view class='list' wx:for="{{listarryShow}}" wx:key='index' data-id="{{item.id}}" bindtap="detailsurl">
+      <view class='Head_portrait'>
+        <image class='Head_portrait_img' src='{{item.guest_head_img}}'></image>
+      </view>
+      <view class='txt'>
+        <view class='list_tlt'>{{item.guest_name}}</view>
+        <view class='list_zy'>{{item.post}}</view>
+        <view class='list_zy'>{{item.company}}</view>
+      </view>
+    </view>
+</view>
+</view>
+<view class="nodate" wx:else>{{nodatecentent}}</view>

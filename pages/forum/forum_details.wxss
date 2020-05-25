@@ -1,0 +1,30 @@
+/* pages/forum/forum_details.wxss */
+/*@import 引用图标css */
+@import "/common/css/icon.wxss";
+
+.h20{width: 100%;height: 10px;background-color: #efeff4;}
+.top{ padding: 0 10px; }
+.top-tlt{width: 100%; height: 30px; border-bottom: 1px solid #c8c8c8; padding: 10px 0;}
+.top-tlt text,.top-bottm text{display: inline-block;}
+.br{width: 3px; height: 80%;  background-color: #00aa83;
+	position: relative; top: 2px;margin-right: 5px;}
+.top-tlt .font{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+	width: 95%;}
+.top-bottm{color: #757575; font-size: 0.9rem; padding-bottom: 15px;}
+.top-bottm view{margin-top: 10px}
+.top-bottm image{width: 17px;height: 17px;vertical-align: middle;margin-right: 5px; }
+.top-bottm text{vertical-align: middle; width: 91%;}
+
+.details-centent{padding: 10px; font-size: 0.9rem; }
+
+.guest-details{padding: 10px;}
+.guest-list{display: -webkit-box;display: -webkit-flex;display: flex; 
+  border-bottom: 1px solid #efeff4; padding: 10px 0;}
+.guest-list-left{margin-right: 20rpx;}
+.guest-list-left image{width: 55px; height:55px;}
+.guest-list-center{-webkit-box-flex: 1;-webkit-flex: 1; flex: 1; display: inline-block;font-size: 0.9rem;
+  color: #8f8f94;}
+.guest-list-center text{display: block;}
+.guest-list-right{width: 16px; text-align: center;}
+.guest-list-left,.uest-list-center,.guest-list-right{display: -webkit-box;-webkit-box-align: center;}
+.icon-youjiantou{color: #3b9e82;}

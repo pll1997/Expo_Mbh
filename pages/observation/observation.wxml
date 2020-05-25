@@ -1,0 +1,20 @@
+<!--pages/observation/observation.wxml -- 观摩点-->
+<view class='warp' wx:if='{{nodate==false}}'>
+  <view class='topnav'>
+    <!-- <view class='nav'>观摩点</view> -->
+    <view class='search_con'>
+        <icon class='search_icon' type='search' size='18'></icon> 
+        <input type="search" name="keyword" value="{{inputValue}}" bindinput="search" bindconfirm='bindconfirm'  class="search_input" placeholder='请输入关键字'/>
+        <icon class='search_icon' type='clear' size='18' bindtap='icon_delete'></icon> 
+    </view>
+  </view>
+   
+  <view class='listbox'>
+    <view class='list' wx:for="{{listarryShow}}" wx:key='index' data-index="{{item.index}}" data-id='{{item.id}}' bindtap='btn_details'>
+      <view class='list_tlt'>{{item.name}}</view>
+      <view class='list_zy'>{{item.address}}</view>
+    </view>
+  </view>
+  
+</view>
+<view class="nodate" wx:else>{{nodatecentent}}</view>

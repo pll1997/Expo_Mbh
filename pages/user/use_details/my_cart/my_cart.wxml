@@ -1,0 +1,79 @@
+<!--pages/user/use_details/my_cart/my_cart.wxml--购物车-->
+<view class='body'>
+  <view class="main" wx:if='{{hasList}}'>
+    <view wx:for='{{list}}' wx:for-index="index1"  wx:key="index">
+      <view class="h10"></view>
+      <view class="list">
+        <view class="tlt">
+          <checkbox-group >
+            <label class='checkbox-allcheck'>
+              <checkbox value="{{!item.checked}}" checked="{{item.checked}}" hidden='hidden' />
+              <icon type="circle" size="23" wx:if="{{!item.checked}}" data-index="{{index1}}"  bindtap="maxselect"></icon>
+              <icon type="success" color="#0fa58a" size="23" data-index="{{index1}}" wx:if="{{item.checked}}" bindtap="maxselect"></icon>
+              <text>{{item.name}}</text>
+            </label>
+          </checkbox-group>
+          <icon class="iconfont icon-shanchu" bindtap="deleteList" data-index="{{index1}}" ></icon>
+        </view>
+        <view class="list-centent">
+          <!--  -->
+          <view class='lists' wx:for='{{item.list}}' wx:for-item="good" wx:for-index="index2"  wx:key="index">
+            <view class='section section-good'>
+              <checkbox-group >
+                <view class='good'>
+                  <label class="checkbox">
+                    <checkbox   id="{{good.sku_id}}"  checked="{{good.checked}}" hidden='hidden' />
+                    <icon type="circle" size="23"   data-index1="{{index1}}" data-index2="{{index2}}" data-id="{{good.sku_id}}" wx:if="{{!good.checked}}" bindtap="chose"   ></icon>
+                    <icon type="success" color="#0fa58a"  data-index1="{{index1}}"  data-index2="{{index2}}"   data-id="{{good.sku_id}}" size="23" wx:if="{{good.checked}}" bindtap="chose"></icon>
+                  </label>
+                  <image class='cover' src='https://s2.ax1x.com/2019/10/15/KCmWDK.th.png'></image>
+                  <view class='content'>
+                    <view class='text name'>{{good.ticket_name}}</view>
+                    <view class='text price'>
+                      <text>¥{{good.price}}</text>
+                      <view class='stepper'>
+                        <view class='subtract {{good.count == 1 ? "disabled": ""}}'  data-index1="{{index1}}" data-index2="{{index2}}" catchtap='subtracttap'>-</view>
+                        <input class='count' type='number' value='{{good.num}}'></input>
+                        <view class='add'  data-index1="{{index1}}" data-index2="{{index2}}" catchtap='addtap'>+</view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </checkbox-group>
+            </view>
+            <view class='section-bottom'>
+              <checkbox-group bindchange="selectalltap">
+                <label class='checkbox-allcheck'>
+                  <checkbox  checked="{{checkAll}}" hidden='hidden' />
+                  <icon type="circle" size="23" wx:if="{{!checkAll}}"></icon>
+                  <icon type="success" color="#0fa58a" size="23" wx:else></icon>
+                  <text class='check-all-text'>全选</text>
+                </label>
+              </checkbox-group>
+              <view class="total">
+                <view class='totalCount'>已选择
+                  <text>{{totalCount}}</text>件商品
+                </view>
+                <view class='totalPrice'>总价：
+                  <text>¥{{totalPrice}}</text>
+                </view>
+              </view>
+              <view class='btn {{totalCount > 0 ? "btn-primary" : "btn-default"}}'>去结算</view>
+            </view>
+          </view>
+          <!--  -->
+        </view>
+      </view>
+    </view>
+    <!--  -->
+  </view>
+  <view class="Nodata" wx:else>
+    <view class="Nodatas">
+      <view>
+        <image class="icongwc" src="https://s1.ax1x.com/2020/03/31/GQpvZV.th.png"></image>
+      </view>
+      <view>购物车还没有数据</view>
+      <view>快去购票那里逛逛吧</view>
+    </view>
+  </view>
+</view>

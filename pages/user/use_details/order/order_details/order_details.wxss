@@ -1,0 +1,45 @@
+/* pages/user/use_details/order/order_details/order_details.wxss */
+.main{height: 100vh;  overflow-y: auto; background-color: #f2f2f2; 
+  padding-bottom: 100px;}
+.h10{height: 10px;background-color: #f2f2f2;}
+.list1{
+  height: 15vh; background-image: url('https://s1.ax1x.com/2020/04/09/G4LznK.md.png');
+  background-repeat: no-repeat; background-size: 100% 100%;
+   color: #fff; display:flex; align-items:center;overflow: hidden;}
+.list1s{width: 100%;}
+.list1 text{ width: 95%; margin-left: 10%;display: block;}
+.time{font-size: 0.9rem; margin-top: 5px;}
+
+.list2{background-color: #fff;}
+.list01{font-size: 0.9rem;font-weight: bold;padding: 10px;}
+.list02_list{background-color: #f9f9f9; padding: 10px; margin-bottom: 3px; 
+  display: -webkit-box; display: -webkit-flex;display: flex;}
+.v1 image {width: 60px;height: 60px;vertical-align: middle;}
+.v2{-webkit-box-flex: 1;-webkit-flex: 1;flex: 1; margin-left: 10px;
+  display:flex;  align-items:center;}
+.v201{font-size: 0.9rem;}
+.v202{ margin-top: 8px;}
+.v20201{color: #dc1e1e;}
+.v20202{color:#7e7e7e; float: right; font-size: 0.9rem;}
+.list03{padding: 10px; }
+.right{ text-align: right;}
+.list03 view,.list4 view{margin-bottom: 5px;}
+.list03 view:last-child,
+.list4 view:last-child
+  {margin-bottom: 0;}
+.list03 text,.list4 text{display: inline-block; width: 49%;}
+.list0301{color:#7f7f7f; font-size: 0.8rem;}
+.list0302{font-size: 0.9rem}
+.list0303{font-size: 1rem}
+.list0303 .right{color: #dc1e1e;}
+
+.list3,.list4{background-color: #fff; padding: 10px;color:#7f7f7f;font-size: 0.9rem;}
+
+.fixed{ width: 93%;
+  position: fixed; bottom: 0; background-color: #fff;padding: 10px;
+  display: flex;justify-content:flex-end;}
+.fixed text{ height: 30px; line-height: 30px; display: inline-block; color: #fff; padding: 0px 15px; border-radius: 25px;
+  font-size: 0.9rem; margin-left: 10px;}
+.del{ background-color: #dc1e1e;}
+.bang{background-color: #02ab8e;}
+.fk{background-color: #dc1e1e}

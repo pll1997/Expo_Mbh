@@ -1,0 +1,25 @@
+/* pages/observation/observation.wxss */
+.warp{width: 100vw;height: 100vh; min-height: 85vh; background-color: #efeff4;}
+.main{ width: 95%; margin: 0 auto;}
+.topnav{width: 100%; height: 55px; position: fixed; top: 0;background-color: #efeff4;}
+.nav{background-color: #f7f7f7;line-height: 44px; text-align: center;font-weight: 500; font-size: 0.9rem;
+  webkit-box-shadow: 0 1px 6px #ccc;box-shadow: 0 1px 6px #ccc;}
+.search_con{ width: 95%;margin: 0 auto;margin-top: 10px;
+  font-size: 16px;-webkit-box-sizing: border-box;box-sizing: border-box;
+  height: 34px; text-align: center;
+  border: 0; border-radius: 6px;background-color: rgba(0, 0, 0, .1);}
+.search_icon{vertical-align: middle;}
+.search_input{
+  display: inline-flex;width: 75%; height: 100%;color: #999; vertical-align: middle;
+  text-align: left; padding: 0 10px;}
+
+.listbox{ width: 95%; margin: 0 auto; background-color: #fff; margin-top: 55px; margin-bottom: 15px;}
+.list{width: 95%; margin: 0 auto; border-bottom: 1px solid #c8c7cc; padding: 10px 0;}
+.list:last-child{border-bottom: none;}
+.list_tlt,.list_zy{overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.list_tlt{font-size: 0.8rem;}
+.list_zy{font-size: 0.7rem;color: #8f8f94;}
+
+/* .nodate{width: 100%;margin-top: 100px; line-height: 150px;text-align: center;} */
+.nodate{width: 100%;height: 100vh;line-height: 150px;text-align: center;background-color: #fff;}
+ 

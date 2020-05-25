@@ -1,0 +1,86 @@
+<!--pages/user/use_details/order/order_list/order_list.wxml -- 购票信息 -已支付-->
+<wxs src="../../../../../utils/subutil.wxs" module="tools" />
+<view class='body'>
+  <view class="swiper-tab">
+    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">已支付</view>
+    <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">未支付</view>
+    <view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">票务信息</view>
+  </view>
+
+  <swiper style="height: {{clientHeight?clientHeight+'px':'auto'}}" current="{{currentTab}}" duration="300" bindchange="swiperTab">
+    <swiper-item class="swiper-item">
+      <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}" bindscrolltolower="scrollbot">
+        <view class='list' wx:for="{{listdata}}" wx:key="index">
+          <view class='v-1'>
+            <text class='o-n'>{{item.oddNumbers}}</text>
+            <text class='red'>{{item.Paymentstatus}}</text>
+          </view>
+          <view class='v-2 clear'>
+            <image src='{{item.src}}'></image>
+            <view class='v-2-r'>
+              <view>会议名称：{{item.name}}</view>
+              <view>单价：￥{{item.UnitPrice}}</view>
+              <view>数量：{{item.znumber}}</view>
+            </view>
+          </view>
+          <view class='v-3'>共计1张票 合计：￥{{item.Total}}</view>
+          <view class='v-4'>
+            <text class='t-d'>删除订单</text>
+            <text class='t-b'>绑定/赠票</text>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item class="swiper-item">
+      <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}" bindscrolltolower="scrollbot">
+        <order_list_Unpaid/>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item class="swiper-item">
+      <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}" bindscrolltolower="scrollbot">
+        <view class='Ticketsbody'>
+          <view class='Tickets'  bindtap="ticket_details" wx:for="{{list}}" wx:key="index" data-id="{{item.virtual_ticket_id}}">
+            <view class="h20"></view>
+            <view class='v-2 clear'>
+              <view class="v-img">
+                <image src='{{item.src}}'></image>
+              </view>
+              <view class='v-2-r'>
+                <view class="v-2-r0">{{item.ticket_name}}</view>
+                <view class="v-2-r1">使用日期:{{tools.sub(item.start_time)}}-{{tools.sub(item.end_time)}}</view>
+                <view class="v-2-r2" wx:if="{{item.use_status==-1}}">已过期</view>
+                <view class="v-2-r2" wx:elif="{{item.use_status==0}}">未使用</view>
+                <view class="v-2-r2" wx:else>已使用</view>
+              </view>
+              <view class='v-2-e'>
+                <text>赠票</text>
+                <text>{{item.bang_status==0?'未绑定':'已绑定'}}</text>
+                <text class="v-2e-btn" wx:if="{{item.bang_status==0}}">绑定</text>
+              </view>
+            </view>
+          </view>
+          <view class='Tickets' wx:for="{{rist}}" wx:key="index" data-id="{{item.virtual_ticket_id}}">
+            <view class="h20"></view>
+            <view class='v-2 clear'>
+              <view class="v-img">
+                <image src='{{item.src}}'></image>
+              </view>
+              <view class='v-2-r'>
+                <view class="v-2-r0">{{item.ticket_name}}</view>
+                <view class="v-2-r1">使用日期:{{tools.sub(item.start_time)}}-{{tools.sub(item.end_time)}}</view>
+                <view class="v-2-r2" wx:if="{{item.use_status==-1}}">已过期</view>
+                <view class="v-2-r2" wx:elif="{{item.use_status==0}}">未使用</view>
+                <view class="v-2-r2" wx:else>已使用</view>
+              </view>
+              <view class='v-2-e'>
+                <text>自购</text>
+                <text>{{item.bang_status==0?'未绑定':'已绑定'}}</text>
+                <text class="v-2e-btn" wx:if="{{item.bang_status==0}}">绑定</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

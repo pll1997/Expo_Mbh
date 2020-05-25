@@ -1,0 +1,15 @@
+<!--pages/user/use_details/user_wyly/user_wyly.wxml-个人中心-我要留言-->
+<!-- <text>pages/user/use_details/user_wyly/user_wyly.wxml</text> -->
+<view class='mian'>
+  <view class='mians'>
+    <view class='min_tlt'>意见</view>
+    <view class="conts">
+      <textarea class="areas" placeholder='个性签名' maxlength='-1'></textarea>
+    </view>
+    <view class='min_tlt'>联系方式</view>
+    <view class='lxfs'>
+      <input placeholder='请留下你的电话号码或邮箱 方便我们反馈' value=''></input>
+    </view>
+    <button class='btn' bindtap='Submission'>提交反馈</button>
+  </view>
+</view>

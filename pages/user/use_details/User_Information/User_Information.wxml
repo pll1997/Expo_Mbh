@@ -1,0 +1,96 @@
+<!--pages/user/use_details/User_Information/User_Information.wxml -用户信息-->
+<view class='main'>
+  <form bindsubmit="formSubmit">
+  <view class='body'>
+      <view class='Headportrait'>
+        <view class="language" bindtap="changeuserpicture">
+          <image  class="userinfo-avatar" src="{{useravatar}}" background-size="cover"></image> 
+        </view>
+        <view class='min_tishi'>头像照片要求白色背景无边框，照片尺寸大小295*378像素
+            100-300kB,jpg格式（1寸白底照片）
+        </view>
+        <view class='username ' wx:if='{{sfstatus==3}}'>
+          <text class='mintlt'>昵称:</text>
+          <input class='input' placeholder='' name="nickname" value='{{nickname}}'></input>
+        </view>
+        <view class='username'>
+          <text class='mintlt'>姓名:</text>
+          <input class='input' placeholder='' name="username" value='{{realname}}' disabled='{{ disableds }}'></input>
+        </view>
+        <view class='username' wx:if='{{sfstatus==1&&2}}'>
+          <text class='mintlt'>性别:</text>
+          <picker class='selector input' mode="selector" range="{{sexSelected}}"  range-key="{{'sex'}}" value="{{sexindex}}"  bindchange="bindsex">
+            <view class="picker">
+              <text>{{sexSelected[sexindex].sex}}</text>
+              <input hidden='true' name="sex" value='{{sexSelected[sexindex].sex}}'></input>
+              <icon class='iconfont icon-xiajiantou' size='14'></icon> 
+            </view>
+          </picker>
+        </view>
+        <view class='username' wx:if='{{sfstatus==1&&2}}'>
+          <text class='mintlt'>国籍:</text>
+          <picker class='selector input' mode="selector" range="{{themeSelected}}"  range-key="{{'zh_name'}}" value="{{index}}" bindchange="bindDateChange" data-code="{{themeSelected[index].code}}">
+            <view class="picker">
+              <text>{{themeSelected[index].zh_name}}</text>
+              <input hidden='true' name="nationality"  value='{{themeSelected[index].zh_name}}'></input>
+              <icon class='iconfont icon-xiajiantou' size='14'></icon> 
+            </view>
+          </picker>
+        </view>
+        <view class='username' wx:if='{{sfstatus==1&&2}}'>
+          <text class='mintlt'>证件类型:</text>
+          <input class='input' placeholder='' disabled='{{ disableds }}' name="pw_type" value='{{pw_type}}' ></input>
+        </view>
+        <view class='username'>
+          <text class='mintlt'>{{zjhm}}:</text>
+          <input class='input' placeholder=''  name="idnumber" value='{{idnumber}}'></input>
+        </view>
+        <view class='username' wx:if='{{sfstatus==1&&2}}'> 
+          <text decode="{{true}}">&emsp;&emsp;&emsp;</text>
+          <text class='tisi'>*请填写真实有效信息，如填写证件信息有误，造成无法入场概不负责。</text>
+        </view>
+        <view class='username'>
+          <text class='mintlt'>手机号:</text>
+          <input class='input' placeholder='' name="phone" value='{{phone}}' disabled='{{ disabled }}'></input>
+        </view>
+        <view class='username'>
+          <text class='mintlt'>邮箱:</text>
+          <input class='input' placeholder='' name="email" value='{{email}}' disabled='{{ disabled }}'></input>
+        </view>
+        <view class='username {{addclass_isShow?"br_no":""}}'>
+          <text class='mintlt'>{{companyname}}：</text>
+          <input class='input' placeholder='' name="company" value='{{company}}'></input>
+        </view>
+        <view class='username' wx:if='{{sfstatus==1&&2}}'> 
+          <text decode="{{true}}">&emsp;&emsp;&emsp;</text>
+          <text class='tisi'>*所在机构的长度不能大于15个字符（中文）或者30个字符（英文）</text>
+        </view>
+        <view class='username' >
+          <text class='mintlt'>{{titlename}}：</text>
+          <input class='input' placeholder='' name="title" value='{{title}}'></input>
+        </view>
+        <view class='username' wx:if='{{sfstatus==1&&2}}'>
+          <text class='mintlt'>机构所在地:</text>
+          <picker class='selector input' mode="selector" range="{{themeSelected}}"  range-key="{{'zh_name'}}" value="{{szindex}}"  bindchange="bindszjg">
+            <view class="picker">
+              <text>{{themeSelected[szindex].zh_name}}</text>
+              <input hidden='true' name="country" value='{{themeSelected[szindex].zh_name}}'></input>
+              <icon class='iconfont icon-xiajiantou' size='14'></icon> 
+            </view>
+          </picker>
+        </view>
+
+        <view class='username'  wx:if='{{sfstatus==1&&2}}'>
+          <text class='mintlt'>饮食要求:</text>
+          <input class='input' placeholder='' name="fool" value='{{fool}}'></input>
+        </view>
+      </view>
+          <view class='h10'></view>
+          <button class='btn_dl' form-type="submit" data-item='{{sfstatus}}'>{{chtext}}</button>
+          <button class='btn_dl qx' bindtap='quxiaoch' wx:if='{{_sfstatus}}'>取消参会</button>
+          <view class='h10'></view>
+          <view class='h10'></view>
+  </view>
+  </form>
+</view>
+

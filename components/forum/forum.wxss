@@ -1,0 +1,41 @@
+/* component/forum/forum.wxss */
+/*@import 引用图标css */
+@import "/common/css/icon.wxss";
+.body{width: 100%; height: 100%;overflow: hidden; 
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    box-orient:vertical;
+    -webkit-flex-flow: column;
+    flex-flow: column;
+}
+.selectorBar {display: flex;border-bottom: 1px solid #ccc;width: 100%; height: 38px; background-color: #fff;}
+.selectorBar .selector {width: 100%;height: inherit;}
+.arrow {width: 70rpx;height: inherit;display: inline-block;}
+.picker{
+    /* height:38px;display: flex;align-items: center;justify-content: center;  */
+    font-size: 0.9rem;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp:1;
+    -webkit-box-orient:vertical; overflow: hidden;
+    text-align: center;
+    margin: 10px 0;
+}
+.selectorBar .middle {border-left: 1px solid #ccc;border-right: 1px solid #ccc;}
+.icon-xiajiantou{width: 14px; height: 14px; vertical-align: middle;}
+
+.hauto{width: 100%;height: 10px;background-color: #eff4f1; }
+.h10{width: 100%;height: 15px;}
+.listbox{ 
+  width: 100%;-webkit-box-flex: 1;-webkit-flex: 1; flex: 1;
+  overflow-y: auto; margin: 0 auto; background-color: #fff;
+}
+.list{width: 95%; margin: 0 auto; border-bottom: 1px solid #c8c7cc; padding: 10px 0; text-align: left;}
+/* .list:nth-last-child(2){border-bottom: none;} */
+.list_tlt,.list_zy{overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.list_tlt{font-size: 0.9rem;}
+.list_zy{font-size: 0.8rem;color: #8f8f94;} 
+
+.nodate{width: 100%;height: 100vh;line-height: 150px;text-align: center;background-color: #fff;}

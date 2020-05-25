@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "forum":"../../components/forum/forum",
+    "DistinguishedGuest": "../../components/DistinguishedGuest/DistinguishedGuest"
+  },
+  "window":{
+    "enablePullDownRefresh": true
+  }
+}

@@ -1,0 +1,18 @@
+/* pages/forum/forum.wxss */
+
+.swiper-tab{
+    width: 100%;
+    border-bottom: 2rpx solid #ccc;
+    text-align: center;
+    height: 80rpx;
+    line-height: 80rpx;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+.swiper-tab-item{width: 30%;color:#434343;}
+.active{color:#00ab84;border-bottom: 4rpx solid #00ab84;}
+.swiper{text-align: center;}
+.swiper-item{background-color: #efeff4;}
+
+

@@ -1,0 +1,66 @@
+<!--pages/observation/observation_details.wxml-->
+<view class="mian" wx:for="{{listarry}}" wx:key="index">
+  <!-- 轮播图 -->
+  <view class='carousel'> 
+    <swiper class='carousel_swiper' indicator-dots="true" indicator-color="#f4f4f4" indicator-active-color="#ccc" autoplay="true" interval='2000' circular='true'>
+      <block wx:for="{{carouselList}}" wx:key="key">
+        <swiper-item data-url='{{item.url}}'>
+          <image class="carouselImg" src='{{item}}' mode='aspectFill' ></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="h20"></view>
+  <view class="details">
+    <view class="top">
+      <view class="top-tlt">
+        <text class="br"></text>
+        <text class='font'>基本信息</text>
+      </view>
+    </view>
+    <view class="details-centent jbxx">
+       {{item.base_info}}
+    </view>
+  </view>
+  <view class="h20"></view>
+  <view class="details">
+    <view class="top">
+      <view class="top-tlt">
+        <text class="br"></text>
+        <text class='font'>观摩点信息</text>
+      </view>
+    </view>
+    <view class="details-centent xx">
+       <view><text class="one"> 观摩点名称:</text><text class="two">{{item.name}}</text></view>
+       <view><text class="one">地址:</text><text  class="two">{{item.address}}</text></view>
+    </view>
+  </view>
+  <view class="h20"></view>
+  <view class="details">
+    <view class="top">
+      <view class="top-tlt">
+        <text class="br"></text>
+        <text class='font'>联络员</text>
+      </view>
+    </view>
+    <view class="details-centent lianluo">
+       <view><text class="one">观摩点联络员:</text><text  class="two">{{item.major_commentator}}</text></view>
+       <view><text class="one">责任单位联络员:</text><text class="two">{{item.assistant_commentator}}</text></view>
+    </view>
+  </view>
+  <view class="h20"></view>
+  <view class="details">
+    <view class="top">
+      <view class="top-tlt">
+        <text class="br"></text>
+        <text class='font'>观摩路线</text>
+      </view>
+    </view>
+    <view class="details-centent lx">
+      <view class="imgview">
+        <image src="{{src}}"></image>
+      </view>
+      <view class="font">带我去观摩 ></view>
+    </view>
+  </view>
+</view>

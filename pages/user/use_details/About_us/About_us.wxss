@@ -1,0 +1,14 @@
+/* pages/user/use_details/About_us/About_us.wxss */
+.mian{color: #333; font-size: 0.9rem;width: 95%;margin: 0 auto;}
+.list1{text-align: center;}
+.logo{width: 80px; height: 80px; margin: 0 auto;display: block; padding: 10px 0 0 0;}
+.list1 .min_tlt{display: block;margin-top: 10px;}
+.list2{width: 100%;display: inline-block;content: '';margin: 10px 0;}
+.list2 .min_tlt{text-indent:40rpx;text-align: left;}
+.l_bor{width: 1vw;height:20px;display: inline-block;margin-right: 2vw; vertical-align: middle;}
+.bg{ background-color: #00ab83;}
+.list3{margin-bottom: 10px;}
+.list2 .min_tlt,
+.list3 .min_tlt{width: 92vw; display: inline-block;}
+.tlt{display: block;padding: 0; margin-bottom: 10px;vertical-align: middle; color: #000; }
+.tlt_cont{margin-left:3vw; display: block; }

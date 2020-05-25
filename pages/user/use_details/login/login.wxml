@@ -1,0 +1,44 @@
+<!--pages/user/use_details/login/login.wxml-注册-登陆板块-->
+<view class='main'>
+  <view class='body'>
+      <view class='username'>
+        <icon class='iconfont icon-shouji'></icon>
+        <input placeholder='请输入手机号/邮箱' name="userPhone" value='' bindinput="userPhoneInput" ></input>
+      </view>
+      <view class='password'>
+        <icon class='iconfont icon-chenggong'></icon>
+        <input password='true' name="userPwd" placeholder='请输入验证码' value='' bindinput="passWdInput" ></input>
+      </view>
+      <view class='password' wx:if='{{hxstatus==1}}'>
+        <icon class='iconfont icon-23'></icon>
+        <input password='true' name="useryqm" placeholder='输入邀请码' value='' bindinput="yqmInput" ></input>
+      </view>
+      <view>
+        <view class='h10'></view>
+        <button class='btn_hq' bindtap='verify'>获取验证码</button>
+        <button class='btn_dl' bindtap='submit' wx:if='{{hxstatus==0}}'>登陆</button>
+        <button class='btn_dl' bindtap='submit' data-item='注册' wx:else>注册</button>
+        <view class='jbzc' bindtap='jb_btn'  wx:if='{{hxstatus==0}}'>嘉宾注册</view>
+        <view class='jbzc' bindtap='jb_btn' wx:else>登陆</view>
+      </view>
+      <view class="note">
+        <view wx:if='{{hxstatus==0}}'>
+          <text>
+          注意事项 :
+          　 ①嘉宾首次登陆，请前往嘉宾注册界面，输入嘉宾邀请码进行注册。
+          　 ②系统采用验证码快捷登录模式，如果您是第一次使用，系统会自动创建账户信息，请在个人中心进行信息补全。如果您是嘉宾用户，
+          可以在“我的”-“我是嘉宾”补充绑定嘉宾信息。
+          　 ③为保障您的信息安全，每个账号会自动绑定一台登录手机，当您登录新手机时，老手机登录信息会自动注销。
+          </text>
+        </view>
+        <view wx:else>
+         <text>
+         注意事项 :
+          　 ①此页面为嘉宾注册页面，请输入与您手机或邮箱匹配的邀请码信息进行注册。
+          　 ②嘉宾注册成功后，系统会自动匹配邀请方填写的您的个人信息，为保障后续流程的畅通，请进行修改确认。
+          　 ③为保障制证内容的准确性，请按要求上传不低于 295 * 378 分辨率的证件照片。
+          </text>
+        </view>
+      </view>
+  </view>
+</view>

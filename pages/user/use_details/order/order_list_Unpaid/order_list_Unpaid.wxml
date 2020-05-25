@@ -1,0 +1,27 @@
+<!--
+  pages/user/use_details/order/order_list_Unpaid/order_list_Unpaid.wxml 
+  购票信息--未支付
+-->
+<view class='body'>
+
+  <view class='list'  wx:for="{{listdata}}" wx:key="index">
+    <view class='v-1'>
+      <text class='o-n'>{{item.oddNumbers}}</text>
+      <text class='red'>{{item.Paymentstatus}}</text>
+    </view>
+    <view class='v-2 clear'>
+      <image src='{{item.src}}'></image>
+      <view class='v-2-r'>
+        <view>会议名称：{{item.name}}</view>
+        <view>单价：￥{{item.UnitPrice}}</view>
+        <view>数量：{{item.znumber}}</view>
+      </view>
+    </view>
+    <view class='v-3'>共计1张票 合计：￥{{item.Total}}</view>
+    <view class='v-4'>
+      <text class='t-b' wx:if='{{item.status==0}}'>查看详情</text>
+      <text class='t-d' wx:if='{{item.status==1}}'>取消订单</text>
+      <text class='t-b' wx:if='{{item.status==1}}'>继续付款</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+<!--component/forum-item.wxml-->
+<view>
+  <picker
+    mode="selector"
+    range="{{dateList}}"
+    bindchange="bindDateChange">
+    <view class="picker">
+      {{dateSelected}}
+    </view>
+  </picker>
+</view>

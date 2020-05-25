@@ -1,0 +1,55 @@
+<!--pages/forum/forum_details.wxml--论坛详情-->
+<view class='mian'>
+  <view class="top">
+    <view class="top-tlt">
+		<text class="br"></text>
+		<text class='font'>{{full_name}}</text>
+	</view>
+	<view class='top-bottm'>
+		<view>
+			<image src="https://s1.ax1x.com/2020/03/18/80ZYsP.th.png"></image>
+      <text>{{time}}</text>
+		</view>
+    <view>
+			<image src="https://s1.ax1x.com/2020/03/18/80ZUZ8.th.png"></image>
+      <text>{{address}}</text>
+		</view>
+	</view>
+  </view>
+  <view class="h20"></view>
+  <view class="details">
+    <view class="top">
+      <view class="top-tlt">
+        <text class="br"></text>
+        <text class='font'>详情</text>
+      </view>
+    </view>
+    <view class="details-centent">
+      <rich-text nodes="{{details}}"></rich-text>
+    </view>
+  </view>
+  <view class="h20"></view>
+  <view class="guest">
+    <view class="top">
+      <view class="top-tlt">
+        <text class="br"></text>
+        <text class='font'>参会嘉宾</text>
+      </view>
+    </view>
+    <view class="guest-details">
+      <view wx:for="{{guestlist}}" wx:key="index" data-id="{{item.id}}" bindtap="detailsurl">
+        <view class="guest-list">
+          <view class="guest-list-left">
+            <image src='{{item.guest_head_img}}'></image>
+          </view>
+          <view class='guest-list-center'>
+            <text>{{item.guest_name}}</text>
+            <text>{{item.attend_type}}</text>
+            <text>{{item.company}}</text>
+          </view>
+          <view class="guest-list-right"><icon class="iconfont icon-youjiantou "></icon></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

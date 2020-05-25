@@ -1,0 +1,120 @@
+
+/*@import 引用图标css */
+@import "/common/css/icon.wxss";
+.body{width: 100%; height: 100vh; background-color: #f1f1f1; color: #6e6e6e;}
+.Nodata{height: 100vh;text-align: center;display:flex; justify-content:center; align-items:center;line-height: 30px;}
+.icongwc,.icongwc image {width: 100px; height: 110px;}
+.h10{width: 100%;height: 10px;}
+.list{padding: 10px; background-color: #fff; }
+.tlt{border-bottom: 1px solid #f1f1f1; margin-bottom: 10px;
+  height: 23px;line-height: 23px; padding-bottom: 5px;
+  display: flex;flex-direction: row;align-items: center;position: relative; }
+.radio{width: 10px;height: 10px;}
+.mrimg{width: 60px;height: 60px;vertical-align: middle;}
+checkbox-group{display: inline-block;height: 23px;}
+.tlt text{display: inline-block;vertical-align: top; 
+    margin-left: 10rpx;height: 23px;line-height: 24px;font-size: 0.9rem;}
+.icon-shanchu{position: absolute;right: 0;top: -5px;font-size: 1.1rem;}
+
+
+/**********************************/
+page {height: 100%;background: #fff;
+  font-family: -apple-system-font, Arial, Helvetica, sans-serif;
+  color: #333;font-size: 32rpx;line-height: 1.42857;}
+
+.lists {width: 100%;min-height: 100%;
+  display: flex;flex-direction: column;box-sizing: border-box;margin-top: 10px;}
+.section {display: flex;flex-direction: column;margin-bottom: 30rpx;}
+.section-good {height: 50px;}
+.good {display: flex;flex-direction: row;
+  align-items: center; position: relative;border-bottom: 1px solid #ccc;}
+.good:last-child {border-bottom: none;}
+.checkbox {width: 48rpx;height: 48rpx;}
+.cover {width: 142rpx;height: 127rpx;margin: 0 10px;}
+
+.lists .text {color: #363636;
+  width: 450rpx;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+.lists .name {color: #333;font-size: 0.9rem;}
+.lists .press {font-size: 28rpx;color: #363636;margin-top: 10rpx;}
+.lists .price {font-size: 36rpx;margin-top: 27rpx;
+  display: -webkit-box;display: -webkit-flex;display: flex;}
+.lists .price text{color: #dc1e1e;}
+.good .stepper {display: flex; position: absolute; 
+  right: 0;flex-direction: row;text-align: center;}
+.stepper .add, .stepper .subtract {width: 50rpx;
+  height: 50rpx;line-height: 50rpx;font-size: 28rpx;box-sizing: border-box;
+  background-color: #f6f6f6;}
+.stepper .disabled {/* color: #eee; */}
+.stepper .count {width: 60rpx; height: 50rpx;
+  line-height: 50rpx;text-align: center;box-sizing: border-box;
+  min-height: 1rem; font-size: 28rpx;}
+.section-bottom {display: flex;flex-direction: row;
+  align-items: center;width: 100%;
+  height: 100rpx; position: fixed; bottom: 0;
+  left: 0; margin-bottom: 0; background-color: #fff;
+  box-sizing: border-box;z-index: 99;}
+
+.section-bottom .btn {
+  width: 160rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fdfffd;
+  background-color: #dc1e1e;
+}
+
+.section-bottom .btn-default {
+  color: #363636;
+  background-color: #eee;
+}
+
+.section-bottom .btn-primary {
+  color: #fdfffd;
+  background-color: #dc1e1e;
+}
+
+.section-bottom .checkbox-allcheck {
+  display: inline-block;
+  margin-left: 30rpx;
+  vertical-align: top;
+  font-size: 0px; 
+}
+
+.section-bottom .check-all-text {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10rpx;
+  height: 23px;
+  line-height: 23px;
+  font-size: 28rpx;
+}
+
+.section-bottom .total {
+  flex: 1;
+  text-align: center;
+  font-size: 26rpx;
+}
+
+.total .totalCount {
+  font-size: 26rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.total .totalPrice {
+  display: inline-block;
+  font-size: 26rpx;
+  margin-left: 20rpx;
+  vertical-align: middle;
+}
+
+.total .totalCount text {
+  color: #dc1e1e;
+  vertical-align: middle;
+}
+
+.total .totalPrice text {
+  color: #dc1e1e;
+  font-size: 36rpx;
+  vertical-align: middle;
+}

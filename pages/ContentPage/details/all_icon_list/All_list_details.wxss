@@ -1,0 +1,2 @@
+/* pages/ContentPage/vr/vr_list/vr_list.wxss */
+.main{width: 100vw;height: 100vh;}

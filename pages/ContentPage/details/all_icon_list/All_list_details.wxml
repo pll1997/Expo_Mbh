@@ -1,0 +1,5 @@
+<!--pages/ContentPage/vr/vr_list/vr_list.wxml  首页列表进入的详情页-->
+<view class="main">
+  <web-view binderror="bindloadError" bindload="bindloadEvent" bindmessage="postMessage" src="{{urls}}"></web-view>
+</view>
+

@@ -1,0 +1,7 @@
+/* pages/user/use_details/order/order_details/Ticket_details.wxss */
+
+.main{height: 100vh;  overflow-y: auto; background-color: #f2f2f2;}
+.tlt{padding: 10px;}
+.details{color:#7e7e7e; font-size: 0.rem; margin-top: 5px;background-color: #fff;padding: 0 10px;  }
+.details view{padding: 10px 0; border-bottom: 1px solid #f2f2f2;}
+.details view:last-child{border-bottom: none;}

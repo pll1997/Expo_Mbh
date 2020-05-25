@@ -1,0 +1,25 @@
+<!-- pages/user/user.wxml-用户中心 -->
+<view class="main" wx:if='{{usershow}}'>
+  <view class='user_center_bg' >
+     <view class="login_link" bindtap='bindgetuserinfo'>
+        <image class='tx_img' src="{{user_img}}"></image>
+        <view>{{username}}</view>
+     </view>
+  </view>
+  <view class='maxlistbox'>
+      <view wx:for="{{listarry}}" wx:key="index" wx:if="{{item.show}}">
+        <view class='list_view' style='margin-top:{{item.margin}}px' bindtap='bin_list' data-item='{{item.tlttext}}'>
+          <image class='left_img' src='{{item.src}}'></image>
+          <text class='list_text'>{{item.tlttext}}</text>
+          <icon class="iconfont icon-youjiantou"></icon>
+        </view>
+      </view>
+      <view class='list_view btn' bindtap='Sign_out' wx:if="{{sign_outVisible}}">
+        <text class='list_text'>退出登陆</text>
+      </view>
+  </view>
+</view>
+<view class="web-view" wx:else>
+  <web-view binderror="bindloadError" bindload="bindloadEvent" bindmessage="postMessage" src="{{urls}}"></web-view>
+</view>
+

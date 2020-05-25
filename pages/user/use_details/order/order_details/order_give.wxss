@@ -1,0 +1,14 @@
+/* pages/user/use_details/order/order_details/order_give.wxss */
+.mian{background-color: #f2f2f2;}
+.fixed{
+  width: 100%;
+  position: fixed; bottom: 0;
+   /* display: -webkit-box; display: -webkit-flex; display: flex; */
+  background-color: #fff; padding: 10px;
+  background-color: yellow;
+}
+.fixed text{padding: 0 15px;}
+.qx{float: left;height: 30px;line-height: 30px;  }
+.btn{border: 1px solid #000; text-align: right;  float: right;
+   width:50%;height: 30px;line-height: 30px; 
+}

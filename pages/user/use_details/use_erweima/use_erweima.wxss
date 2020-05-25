@@ -1,0 +1,80 @@
+/* pages/user/use_details/use_erweima/use_erweima.wxss 我的二维码*/
+/*@import 引用图标css */
+@import "/common/css/icon.wxss";
+/* 我的二维码 */
+.main{width: 100%;height: 100vh;     background: #004092;color: #666;}
+.first_box { width: 100%;position: absolute; z-index: 100; }
+.first_box .first_boxs { width: 80%;overflow: hidden; padding-top: 20px; margin: 0 auto;}
+.first_box ul {margin-left: 8%; margin-top: 5px;margin-bottom: 5px;}
+.first_box .bg1 {width: calc(280px/2.5);height: calc(132px/2.5);
+  background: url('https://s2.ax1x.com/2019/06/18/VLio7R.png')no-repeat;
+  background-size: cover;background-position: center;}
+.first_box .bg2 {width: calc(414px/2.5);height: calc(70px/2.5);
+  background: url('https://s2.ax1x.com/2020/03/11/8AmYRg.png')no-repeat;
+  background-size: cover;background-position: center; float: right;}
+.second_box {overflow: hidden; z-index: 100;
+  width: 100%;height: 50%;margin: auto;position: absolute;top: 0; left: 0; bottom: 0; right: 0;
+}
+.second_box .second_box1 {width: 65%; margin: 0 auto;
+  background: white; border-radius: 5px;overflow: hidden; text-align: center;
+  padding: 15px 20px;}
+.second_box .second_box1  text{text-align: left;}
+.background_prelative {width: 100%; height: 100%;position: relative;}
+.background_prelative .prelative_img1 {width: 100%; height: 40%; position: absolute;z-index: 100;}
+.background_prelative .prelative_img1:nth-child(1) {
+  background: url('https://s2.ax1x.com/2020/03/11/8AmUMj.png') no-repeat;
+  background-size: cover;
+}
+.background_prelative .prelative_img1:nth-child(2) {
+  background: url('https://s2.ax1x.com/2020/03/11/8Amass.png') no-repeat;
+  background-size: cover;bottom: 0;}
+text{display: block; font-size: 0.9rem;}
+.img_tip{font-size: 0.8rem;}
+.erweima_img{width: 147px; height: 147px;}
+
+/* 我是嘉宾 */
+.jiabin_main{ width: 100%; height: 100vh; background-color: #efeff4;}
+.jiabin_mains{ width: 90%; margin: 0 auto; }
+.username{ border-radius: 3px; line-height: 40px; 
+  display: -webkit-box;   -webkit-box-pack: center;-webkit-box-align: center; 
+  border-bottom: 1px solid #eee; background-color: #fff; 
+}
+.mintlt{ width: 20%;font-size: 0.9rem;padding-left: 10px;}
+.input{width:100%; height: 40px; line-height: 40px; font-size: 0.9rem;}
+.zhaq_main .input{ border-top: 1px solid #eee; }
+ button{font-size: 0.9rem;color: white;margin-top: 15px; background-color: #007aff;}
+ .h10{width: 100%;height: 2vh;}
+
+/* 账号与安全 */
+.zhaq_main{ width: 100%; height: 100vh; background-color: #efeff4;}
+.list_view{padding: 11px 15px;
+  display: -webkit-box;display: -webkit-flex;display: flex;
+  border-top: 1px solid #eee; background-color: #fff;text-align: right;}
+.list_text{ display: inline-block;font-size: 0.9rem; -webkit-box-flex: 1;-webkit-flex: 1;flex: 1;
+  text-align: left;line-height: 26px;width: 100%;
+}
+.selector.input{width: 90vw;margin: 0 auto;}
+
+.tis-text{color: #999; width: 90vw; margin: 0 auto;display: block;height: 40px;line-height: 40px; }
+.icon-youjiantou{color: #3b9e82;line-height: 26px;}
+.dh{display: none;}
+.hqyzm{width: 25%;}
+
+
+.view_details{width: 100%; height: 100%; background-color: #fff; }
+.view_detailsv{width: 95%; margin: 0 auto; }
+.zhanq_list{ width: 90vw; height: 39px; display:flex; justify-content:center; align-items:center;
+    border-top: 1px solid #eee;background-color: #fff; margin: 0 auto;} 
+.noflex{justify-content:initial;}
+.selector{ width: 100%;}
+.picker{display:flex; width: 100%;}
+.picker_text{ width: 100%;margin-left: 10px;}
+.picker_text .icon-xiajiantou{ text-align: right; /*position: absolute;right:2%; top: 11px;*/}
+
+.yzm_input{ width: 70%; font-size: 0.9rem;margin-left: 10px;}
+.yzm_time{width: 25%;text-align:right;color: #999;font-size: 0.8rem;}
+.color{ margin-top: 30px;}
+.mar-t{ margin-top: 50px; background-color: red;}
+.h10v{width: 100%; height: 15px;background-color: #efeff4;}
+.zhaq_btn{ background-color: #3b9e82;}
+.zhaq_back{background-color: #ccc;}

@@ -1,0 +1,12 @@
+var sub = function (val) {
+  if (val.length == 0 || val == undefined) {
+    return;
+  }
+  if (val.length > 0 && val.length<9) {
+    return val.substring(0, 8);
+  } 
+  if (val.length > 9) {
+    return val.substring(0, 10);
+  } 
+}
+module.exports.sub = sub;

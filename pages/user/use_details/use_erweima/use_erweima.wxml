@@ -1,0 +1,88 @@
+<!--pages/user/use_details/use_erweima/use_erweima.wxml--我的二维码-->
+<view class='main' wx:if='{{jmerweima==true}}'>
+  <view class="background_prelative">
+				<view class="prelative_img1 "></view>
+				<view class="prelative_img1"></view>
+				<view class="first_box">
+				<view class='first_boxs'>
+					<view class='bg1'></view>
+					<view class='bg2'></view>
+				</view>
+			</view>
+			<view class="second_box">
+				<view class="second_box1">
+					<view>
+          <text>姓名：{{realname}}</text>
+          <text>公司：{{company}}</text>
+          <text>职位：{{post}}</text>
+          <view class="flex">
+              <image class='erweima_img' src="{{erweima}}" alt="二维码" onerror="this.src='/statics/images/default_image.jpg';this.onerror=null">
+              </image>
+              <view class="flex img_tip">请向工作人员出示此页面</view>
+          </view>
+					</view>
+				</view>
+			</view>
+			</view>
+</view>
+<!-- 我是嘉宾 -->
+<view class='jiabin_main' wx:if='{{jiabin==true}}'>
+  <view class='jiabin_mains'>
+    <form bindsubmit="formSubmit">
+      <view class='h10'></view>
+        <view class='username'>
+        <text class='mintlt'>邀请码:</text>
+        <input class='input' placeholder='请输入邀请码' name="yqm" value=''></input>
+      </view>
+      <button class='btn_dl' form-type="submit">提交</button>
+    </form>
+  </view>
+</view>
+<!-- 账号与安全 -->
+<view class='zhaq_main' wx:if='{{zhaq==true}}'>
+  <view class='view_list' wx:if='{{zhaqlist==true}}'>
+    <view class='list_view' bindtap='bin_list' data-item='phone'>
+      <text class='list_text '>更绑手机号</text>
+      <icon class="iconfont icon-youjiantou"></icon>
+    </view>
+    <view class='list_view' bindtap='bin_list' data-item='email'>
+      <text class='list_text '>更绑邮箱</text>
+      <icon class="iconfont icon-youjiantou"></icon>
+    </view>
+  </view>
+  <view class='view_details' wx:if='{{zhaqlist==false}}'>
+    <view class='view_detailsv'>
+      <text class='tis-text'>为了保障您的账号安全，变更信息前需验证身份</text>
+      <view class='zhanq_list noflex'>
+            <text>验证方式：</text>
+        </view>
+      <picker class='selector input' mode="selector" range="{{zhaqarry}}"  range-key="{{'value'}}" value="{{index}}" bindchange="bindDateChange">
+          <view class="picker">
+            <text class='picker_text'>{{zhaqarry[index].value}}</text>
+            <icon class='iconfont icon-xiajiantou' size='14'></icon> 
+          </view>
+        </picker>
+        <view class='zhanq_list'>
+            <input class='yzm_input' value='{{tel_mailbox}}' placeholder='请输入验证码' bindinput="getj_yzm1"></input>
+            <text class="hqyzm" bindtap='SendAppChangeCode' wx:if='{{send1==false}}'>获取验证码</text>
+            <text class='yzm_time'  wx:else>{{second}}s</text>
+        </view>
+    </view>
+    <view class='h10v'></view>
+    <view class='view_detailsv'>
+        <view class='zhanq_list noflex'>
+            <text>更绑账号：</text>
+        </view>
+        <view class='zhanq_list noflex'>
+            <input class='yzm_input' value='{{newzh}}' placeholder='请输入手机号/邮箱'  bindinput="getj_newzh"></input>
+        </view>
+        <view class='zhanq_list'>
+            <input class='yzm_input' value='{{tel_mailbox2}}' placeholder='请输入验证码'  bindinput="getj_yzm2"></input>
+            <text class="hqyzm" bindtap='GetUserInput' wx:if='{{send2==false}}'>获取验证码</text>
+            <text class='yzm_time'  wx:else>{{second2}}s</text>
+        </view> 
+        <button class='zhaq_btn' bindtap='zhaq_sbmit'> 提交 </button>
+        <button class='zhaq_back' bindtap='back'> 返回 </button>
+    </view>
+  </view>
+</view>

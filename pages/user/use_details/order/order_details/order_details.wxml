@@ -1,0 +1,58 @@
+<!--pages/user/use_details/order/order_details/order_details.wxml
+  订单列表-详情（已支付-未支付）
+-->
+<view class="main">
+  <view class="list1">
+    <view class="list1s">
+      <!-- <text>购票成功</text> -->
+      <text>等待付款</text>
+      <text class="time">20分30秒后订单将会自动关闭</text>
+    </view>
+  </view>
+  <view class="list2">
+    <view class="list01">展会票</view>
+    <view class="list02">
+      <view class="list02_list" wx:for='{{arrylist}}' wx:key='index'>
+        <view class="v1"><image src="{{item.src}}"></image></view>
+        <view class="v2">
+          <view class="v2s">
+            <view class="v201">{{item.name}}</view>
+            <view class="v202">
+              <text class="v20201">￥{{item.price}}</text>
+              <text class="v20202">x{{item.number}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="list03">
+      <view class="list0301"><text>票总价</text><text class="right">￥390</text></view>
+      <view class="list0302"><text>订单总价</text><text class="right">￥390</text></view>
+      <view class="list0303"><text>付款金额</text><text class="right">￥390</text></view>
+    </view>
+  </view>
+  <view class="h10"></view>
+  <view class="list3">
+    <text>留言：留言留言留言留言留言留言</text>
+  </view>
+  <view class="h10"></view>
+  <view class="list4">
+    <view> <text> 订单编号：</text><text class="right">12222112 </text></view>
+    <view><text>支付方式：</text><text class="right">微信支付</text></view>
+    <view><text>订单创建时间：</text><text class="right">2019-5-2 13:51:20</text></view>
+    <view><text>订单完成时间：</text><text class="right">2019-5-2 13:51:20</text></view>
+  </view>
+  <view class="h10"></view>
+  <view class="list4">
+    <view> <text>发票抬头：</text><text class="right">12222112 </text></view>
+    <view><text>纳税人识别号：</text><text class="right">微信支付</text></view>
+    <view><text>发票内容：</text><text class="right">2019-5-2 13:51:20</text></view>
+  </view>
+  
+  <view class="fixed">
+    <text class="del">删除订单</text>
+    <text class="bang">绑定/增票</text>
+    <!-- <text class="fk">继续付款</text> -->
+  </view>
+
+</view>
