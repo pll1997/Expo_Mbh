@@ -46,11 +46,10 @@ var key = "bigexpos";
 var token = wx.getStorageSync('usertoken') || '';
 
 // var yuming = 'https://www.bigdata-expo.cn/';
-var yuming = 'https://www.chinadatavalley.net/';
-// var yuming = 'http://hdiq24.natappfree.cc/'; //快数据-杨华 的本地测试地址  - 15387489448
+// var yuming = 'https://www.chinadatavalley.net/';
 // var yuming = 'https://bigexp.fefry.com/';
 
-// var yuming = 'http://tp6.bigexp.52api.net/';
+var yuming = 'http://demo.52api.net/';
 // var localhost = 'http://www.tp6sbh.com/';
 var localhost = 'http://www.expombh.com/';
 

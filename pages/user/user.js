@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    urls: common.localhost + 'usercenter/wxweb/index?source=小程序',//本地网址可调用
+    urls: common.https + 'usercenter/wxweb/index?source=小程序',//本地网址可调用
     listarry:[
       { index: 0, src: 'https://s1.ax1x.com/2020/05/07/YZjnRx.png', tlttext: '参会须知', show: true },
       { index: 1, src: 'https://s2.ax1x.com/2019/07/02/ZGDJW4.th.png', tlttext: '账号安全', show: true},
@@ -130,9 +130,15 @@ Page({
         // usershow: false,
         usersourceNo:true,
         username: userrealname,
-        user_img: common.localhost + userfileavatar,
+        user_img: common.yuming + userfileavatar,
         sign_outVisible: true
       });
+
+      if (userfileavatar == '' || userfileavatar == undefined || userfileavatar == null) {
+        _that.setData({
+          user_img: _that.data.defaultimg
+        });
+      }
     }else{
       _that.setData({
         usershow: true,

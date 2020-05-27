@@ -1,5 +1,5 @@
 // pages/ContentPage/vr/vr_list/vr_list.js
-var common = require('../../../../common/js/common.js')
+var common = require('../../../../common/js/common.js');
 
 Page({
 
@@ -10,6 +10,8 @@ Page({
     urls:'',
     dataval:''
   },
+
+
 
   /**
    * 生命周期函数--监听页面加载
@@ -23,15 +25,15 @@ Page({
   },
   url:function(obj,id){
     var _that=this;
-    var urlv,tlte='数博会';
+    var urlv,tlte='民博会';
     var source='小程序';
     //var https ='https://www.bigdata-expo.cn/';
-    // var https = common.yuming;
-    var https =common.localhost;
+    var https = common.yuming;
     var localhost = common.localhost;
+        // https = localhost;
     switch (obj) {
       case '0':
-        urlv = https +'platform/ticket/ttype?type=1';
+        urlv = https +'platform/ticket/ttype?type=1&v=1.1';
         tlte='订票';
         break;
       case '1':
@@ -75,7 +77,12 @@ Page({
         tlte = '登陆'; 
         break;
       case '个人信息':
-        urlv = https + 'usercenter/wxweb/verify';
+        var userstatus = wx.getStorageSync('userstatus');
+        if (userstatus == 1) {//嘉宾
+          urlv = https + 'usercenter/wxweb/verify';
+        } else if (userstatus == 3 || userstatus == 2) {//普通用户
+          urlv = https + 'usercenter/wxweb/profile';
+        }
         tlte = '个人信息';
         break;
       case '账号安全':
@@ -87,7 +94,12 @@ Page({
         tlte = '我的二维码';
         break;
       case '我是嘉宾':
-        urlv = https + 'usercenter/wxweb/become_guest';
+        var userstatus = wx.getStorageSync('userstatus');
+        if (userstatus == 2||userstatus == 3) {
+          urlv = https + 'usercenter/wxweb/become_guest';
+        }else if (userstatus == 1) {
+          common.showToast('none', '你已是嘉宾，无需重复激活');
+        }
         tlte = '我是嘉宾';
         break;
       case '我的行程':
@@ -142,16 +154,17 @@ Page({
   postMessage: function (e) {
     var _that=this;
     wx.setStorageSync('usersource', '' + e.detail.data[0].source + '');
-
-
     var dataval = e.detail.data[0].dataval;
     var realname = dataval[0].realname;
     var fileavatar = dataval[0].fileavatar;
+    var status = dataval[0].status;
+    
     
     //本地储存数据
     wx.setStorageSync('userdataval', '' + dataval + '');
     wx.setStorageSync('userrealname', '' + realname + '');
     wx.setStorageSync('userfileavatar', '' + fileavatar + '');
+    wx.setStorageSync('userstatus', '' + status + '');
    
     // 获取存储数据-demo
     // wx.getStorageSync('dataval');

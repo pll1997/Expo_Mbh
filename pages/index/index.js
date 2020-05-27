@@ -1,5 +1,6 @@
 
 
+
 Page({
 
   /**
@@ -26,6 +27,8 @@ Page({
     var _that = this;
     _that.select_icon();
   },
+
+  
   /* 
     icon点击事件
   */

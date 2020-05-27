@@ -82,6 +82,12 @@ Page({
         });
       }else{
         var datalen = datas.data.data.length;//获取数组的长度
+        if (datalen <= 0 || datalen == '' || datalen == null) {
+          _that.setData({
+            nodate: true,
+            nodatecentent: '暂时没有数据哟~'
+          });
+        }
         var listarry=[];//定义新的数组
         for (var i = 0; i<datalen;i++ ) { 
           var datalist = datas.data.data[i];//获得每一个单独数组

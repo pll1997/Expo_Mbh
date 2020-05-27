@@ -84,8 +84,8 @@
 				},
 				{
 					"id": 4,
-					"name": "pages/observation/observation",
-					"pathName": "pages/observation/observation",
+					"name": "个人中心",
+					"pathName": "pages/user/user",
 					"query": "",
 					"scene": null
 				}

@@ -26,7 +26,7 @@
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "数博会",
+    "navigationBarTitleText": "民博会",
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh": false,
     "onReachBottomDistance": 50

@@ -1,9 +1,8 @@
 <!--pages/user/use_details/About_us/About_us.wxml--关于我们-->
 <view class='mian'>
     <view class='list1'>
-      <image class='logo' src='https://s2.ax1x.com/2020/03/09/8SWUw6.png'></image>
-      <text class='min_tlt'>数博会</text>
-      <text class='min_tlt'>版本号 2.4.1 </text>
+      <image class='logo' src='https://s1.ax1x.com/2020/05/26/tPQVWn.png'></image>
+      <text class='min_tlt'>民博会</text>
     </view>
     <view class='list2'>
      <text class='l_bor'></text>
@@ -13,29 +12,22 @@
       
       <text class='min_tlt'>
         <text class='tlt'><text class='l_bor bg'></text>主办单位 </text>
-        <text class='tlt_cont'>中华人民共和国国家发展和改革委员会
-        中华人民共和国工业和信息化部
-        中华人民共和国国家互联网信息办公室
-        贵州省人民政府</text>
+        <text class='tlt_cont'>贵州省委宣传部
+            省工业和信息化厅
+            贵阳市人民政府联合
+        </text>
       </text>
     </view>
     <view class='list3'>
       <text class='min_tlt'>
         <text class='tlt'><text class='l_bor bg'></text>承办单位 </text>
-          <text class='tlt_cont'>国家发展和改革委员会
-          工业和信息化部
-          国家互联网信息办公室
-          贵阳市人民政府 
-          贵安新区管委会 
-          贵州省发展和改革委员会 
-          贵州省工业和信息化厅
-          贵州省大数据发展管理局 
-          贵州省商务厅 
-          贵州省互联网信息办公室
-          中国科学院科技战略咨询研究院
-          中国互联网协会
-          中国国际贸易促进委员会北京市分会 
-          中国网络电视台</text>
+          <text class='tlt_cont'>贵州省民宗委
+          贵州省商务厅
+          团省委
+          贵州省文化和旅游厅
+          贵州省省投资促进局
+          省妇联
+          </text>
       </text>
     </view>
     <view class='list3'>

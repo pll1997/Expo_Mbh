@@ -19,11 +19,11 @@ Page({
     var _that=this;
     var arrylist=[
       {
-        src: 'https://s2.ax1x.com/2019/10/15/KCmWDK.th.png', name:'2019数博会展会门票普通观众票众',
+        src: 'https://s2.ax1x.com/2019/10/15/KCmWDK.th.png', name:'2019民博会展会门票普通观众票众',
         price: '50', number:'2'
       },
       {
-        src: 'https://s2.ax1x.com/2019/10/15/KCmWDK.th.png', name: '2019数博会展会门票普通观众票众',
+        src: 'https://s2.ax1x.com/2019/10/15/KCmWDK.th.png', name: '2019民博会展会门票普通观众票众',
         price: '50', number: '2'
       }
     ];
