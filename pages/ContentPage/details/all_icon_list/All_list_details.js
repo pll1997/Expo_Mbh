@@ -49,7 +49,7 @@ Page({
         tlte = '酒店及周边';
         break;
       case '4':
-        urlv = https +'exhibitor/wxweb/production';
+        urlv = https +'exhibitor/wxweb/production?v=1.2';
         tlte = '展商列表';
         break;
       case '5':

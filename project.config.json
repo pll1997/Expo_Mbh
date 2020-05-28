@@ -85,7 +85,7 @@
 				{
 					"id": 4,
 					"name": "个人中心",
-					"pathName": "pages/user/user",
+					"pathName": "pages/index/index",
 					"query": "",
 					"scene": null
 				}
